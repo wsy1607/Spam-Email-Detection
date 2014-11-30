@@ -4,7 +4,10 @@ from pandas import DataFrame
 import matplotlib.pyplot as plt
 
 filename = 'train_msgs.txt'
-txt = open(filename)
-data1 = txt.read()
-data1 = DataFrame(data1)
-data1.head
+
+data_file = open(filename)
+email_txt = data_file.read()
+word_list = email_txt.split()
+unique_word = set(word_list)
+
+print len(unique_word)
