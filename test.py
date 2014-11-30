@@ -27,6 +27,13 @@ unique_word = unique_word.difference(stop_word)
 #get rows
 word_row = email_txt.splitlines()
 #create empty word matrix
-word_features = np.zeros((len(word_row)-1,len(unique_word)))
-
+word_features = np.zeros((len(word_row)-1,len(unique_word)-1))
+#get 
+for i in range(0,len(word_row)):
+	row = word_row.split()
+	for s in row:
+		for j in range(0,len(unique_word)):
+			if s==unique_word[j]:
+				word_features[i,j] = word_features[i,j]+1
+	
 print word_features.shape
