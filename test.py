@@ -28,4 +28,5 @@ unique_word = unique_word.difference(stop_word)
 word_row = email_txt.splitlines()
 #create empty word matrix
 word_features = np.zeros((len(word_row)-1,len(unique_word)))
-print word_features.shape()
+
+print word_features.shape
