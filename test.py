@@ -12,7 +12,7 @@ data_file = open(filename)
 email_txt = data_file.read()
 #Replace uppercase by lowercase
 for word in string.ascii_lowercase:
-	re.sub(word.upper(),word,email_txt
+	re.sub(word.upper(),word,email_txt)
 
 #get words
 word_list = email_txt.split()
