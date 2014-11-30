@@ -12,7 +12,7 @@ data_file = open(filename)
 email_txt = data_file.read()
 #Replace uppercase by lowercase
 for word in string.ascii_lowercase:
-	re.sub(word.upper(),word,email_txt
+	re.sub(word.upper(),word,email_txt)
 
 #get words
 word_list = email_txt.split()
@@ -24,4 +24,8 @@ stop_word = set(stop_word)
 #exclude stop words
 unique_word = unique_word.difference(stop_word)
 
-print len(unique_word)
+#get rows
+word_row = email_txt.splitlines()
+#create empty word matrix
+word_features = np.zeros((len(word_row)-1,len(unique_word)))
+print word_features.shape()
